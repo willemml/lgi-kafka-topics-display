@@ -1,12 +1,27 @@
-body {
-  margin: 20px;
+// The main container element
+.Collapsible {
+  background-color: $base;
 }
 
-ol, ul {
-  padding-left: 40px;
-  list-style-type: none;
+
+//The content within the collaspable area
+.Collapsible__contentInner {
+  padding: 10px;
+  border: 1px solid $lightGrey;
+  border-top: 0;
+
+  p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
-/* Style the button that is used to open and close the collapsible content */
+
+//The link which when clicked opens the collapsable area
 .Collapsible__trigger {
   display: block;
   font-weight: 400;
@@ -44,8 +59,8 @@ ol, ul {
 .CustomTriggerCSS {
   background-color: lightcoral;
   transition: background-color 200ms ease;
-
-
+  
+  
 }
 
 .CustomTriggerCSS--open {
@@ -58,20 +73,3 @@ ol, ul {
   background-color: #CBB700;
   color: black;
 }
-.content {
-    padding: 0 18px;
-    overflow: hidden;
-    background-color: #f1f1f1;
-}
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .Collapsible__trigger:hover {
-  background-color: #555;
-}
-
-/* Style the collapsible content. Note: hidden by default
-.content {
-  padding: 0 18px;
-  display: block;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}*/
